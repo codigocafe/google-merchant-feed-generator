@@ -1,0 +1,35 @@
+{
+  "name": "oldmine/google-merchant-feed-generator",
+  "type": "library",
+  "description": "Simple Google Merchant Feed generator library",
+  "keywords": [
+    "Merchant Feed",
+    "Google Merchant",
+    "Google",
+    "Merchant",
+    "Feed",
+    "Generator"
+  ],
+  "homepage": "https://github.com/oldmine/google-merchant-feed-generator",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "Zhelninskiy Daniil Igorevich",
+      "email": "webmailexec@gmail.com",
+      "homepage": "https://github.com/oldmine",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.0"
+  },
+  "require-dev": {
+    "php": ">=5.3.0",
+    "phpunit/phpunit": "^4"
+  },
+  "autoload": {
+    "psr-4": {
+      "oldmine\\GoogleMerchantFeedGenerator\\": "src"
+    }
+  }
+}
