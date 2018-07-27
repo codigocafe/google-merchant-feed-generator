@@ -49,6 +49,7 @@ class XMLGenerator implements IFeedGenerator {
 
     public function printFeed()
     {
+        header('Content-Type: application/xml; charset=utf-8');
         die($this->result);
     }
 
