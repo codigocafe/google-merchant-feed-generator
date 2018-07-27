@@ -3,6 +3,8 @@
 Библиотека для простого создания [Google Merchant Feed](https://support.google.com/merchants/answer/7052112?hl=ru)
 [Страница на packagist.org](https://packagist.org/packages/oldmine/google-merchant-feed-generator)
 
+[Страница на packagist.org](https://packagist.org/packages/oldmine/google-merchant-feed-generator)
+
 ## Getting Started
 
 ### Зависимости
