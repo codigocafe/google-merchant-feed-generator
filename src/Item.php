@@ -99,7 +99,7 @@ class Item implements IGenerated {
 
     public function setCondition($condition)
     {
-        if (in_array($condition, Constants::CONDITIONS_ENUM, true)){
+        if (in_array($condition, Constants::$CONDITIONS_ENUM, true)){
             $this->condition = $condition;
         } else {
             throw new \Exception ('Condition: ' . $condition . ' is not valid.');
@@ -114,7 +114,7 @@ class Item implements IGenerated {
 
     public function setAvailability($availability)
     {
-        if (in_array($availability, Constants::AVAILABILITY_ENUM, true)){
+        if (in_array($availability, Constants::$AVAILABILITY_ENUM, true)){
             $this->availability = $availability;
         } else {
             throw new \Exception ('Availability: ' . $availability . ' is not valid.');
@@ -134,7 +134,7 @@ class Item implements IGenerated {
         $currency = $priceArr[1];
 
         $isValidPrice = preg_match(Constants::PRICE_REGEX, $price);
-        $isValidCurrency = in_array($currency, Constants::CURRENCY_ENUM);
+        $isValidCurrency = in_array($currency, Constants::$CURRENCY_ENUM);
 
         if ($isValidPrice === 1 && $isValidCurrency === true){
             $this->price = $price . ' ' . $currency;
@@ -147,7 +147,7 @@ class Item implements IGenerated {
     public function setPriceWithCurrency($price, $currency)
     {
         $isValidPrice = preg_match(Constants::PRICE_REGEX, $price);
-        $isValidCurrency = in_array($currency, Constants::CURRENCY_ENUM);
+        $isValidCurrency = in_array($currency, Constants::$CURRENCY_ENUM);
 
         if ($isValidPrice === 1 && $isValidCurrency === true){
             $this->price = $price . ' ' . $currency;

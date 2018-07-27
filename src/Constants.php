@@ -2,19 +2,19 @@
 namespace oldmine\GoogleMerchantFeedGenerator;
 
 final class Constants {
-    const CONDITIONS_ENUM = array(
+    public static $CONDITIONS_ENUM = array(
         'new',
         'refurbished',
         'used'
     );
 
-    const AVAILABILITY_ENUM = array(
+    public static $AVAILABILITY_ENUM = array(
         'in stock',
         'out of stock',
         'preorder'
     );
 
-    const CURRENCY_ENUM = array(
+    public static $CURRENCY_ENUM = array(
         'USD',
         'EUR',
         'GBP',
