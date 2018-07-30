@@ -137,7 +137,7 @@ class Item implements IGenerated {
         $isValidCurrency = in_array($currency, Constants::$CURRENCY_ENUM);
 
         if ($isValidPrice === 1 && $isValidCurrency === true){
-            $this->price = $price . ' ' . $currency;
+            $this->price = number_format($price, 2, '.', '') . ' ' . $currency;
         } else {
             throw new \Exception ('Price string: ' . $PriceString . ' is not valid.');
         }
@@ -150,7 +150,7 @@ class Item implements IGenerated {
         $isValidCurrency = in_array($currency, Constants::$CURRENCY_ENUM);
 
         if ($isValidPrice === 1 && $isValidCurrency === true){
-            $this->price = $price . ' ' . $currency;
+            $this->price = number_format($price, 2, '.', '') . ' ' . $currency;
         } else {
             throw new \Exception('Price and currency: ' . $price . ' ' . $currency . ' is not valid.');
         }
