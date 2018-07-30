@@ -61,7 +61,7 @@ class XMLGeneratorTest extends \PHPUnit_Framework_TestCase
         $result .= '<g:image_link>https://getcomposer.org/img/logo-composer-transparent5.png</g:image_link>' . PHP_EOL;
         $result .= '<g:condition>new</g:condition>' . PHP_EOL;
         $result .= '<g:availability>in stock</g:availability>' . PHP_EOL;
-        $result .= '<g:price>100 RUB</g:price>' . PHP_EOL;
+        $result .= '<g:price>100.00 RUB</g:price>' . PHP_EOL;
         $result .= '<g:brand>Test</g:brand>' . PHP_EOL;
         $result .= '<g:mpn>4687DF4</g:mpn>' . PHP_EOL;
         $result .= '</item>' . PHP_EOL;
