@@ -1,6 +1,10 @@
 # Google Merchant Feed Generator
 
-Библиотека для простого создания [Google Merchant Feed](https://support.google.com/merchants/answer/7052112?hl=ru).
+Библиотека для создания [Google Merchant Feed](https://support.google.com/merchants/answer/7052112?hl=ru).
+
+Библиотека проверяет целостность и формат данных чтобы соответствовать требованиям Google Merchant Center.
+
+Данные для заполнения вы получаете из вашей базы данных, xml, json или иного формата и устанавливаете с помощью удобных методов.
 
 [Страница на packagist.org](https://packagist.org/packages/oldmine/google-merchant-feed-generator)
 
@@ -43,43 +47,16 @@ require_once('src/XMLGenerator.php');
 ````
 
 #### Пример использования
+
+See [UsageExample.php](UsageExample.php).
+
+Выбрав генератор фида у вас есть несколько вариантов вывода результата:
+
 ````
-//Импортируем пространства имён
-use oldmine\GoogleMerchantFeedGenerator\Feed;
-use oldmine\GoogleMerchantFeedGenerator\Channel;
-use oldmine\GoogleMerchantFeedGenerator\Item;
-use oldmine\GoogleMerchantFeedGenerator\XMLGenerator;
-
-//Создаём новый фид
-$feed = new Feed();
-
-//Создаём новый канал и настраиваем его
-$channel = new Channel();
-$channel->setTitle('TestFeed')
-    ->setLink('https://getcomposer.org/')
-    ->setDescription('Test Feed Description')
-    ->setFeed($feed);
-
-//Создаём новый продукт и настраиваем его
-$item = new Item();
-$item->setId(1)
-    ->setTitle('Test Title 1')
-    ->setDescription('Test Description 1')
-    ->setLink('https://www.google.com/')
-    ->setImageLink('https://getcomposer.org/img/logo-composer-transparent5.png')
-    ->setCondition('new')
-    ->setAvailability('in stock')
-    ->setPriceWithCurrency(100, 'RUB')
-    ->setBrand('Test')
-    ->setMpn('4687DF4')
-    ->setChannel($channel);
-    
-//Создаём генератор необходимого формата
-$generator = new XMLGenerator();
-$generator->generateFeed($feed);
-$generator->printFeed();
+$generator->printFeed() // Вывод фида в текущем документе
+$generator->saveFeed($file) // Сохранить фид в $file 
+$generator->getFeed() // Получить фид в виде строки
 ````
-
 ## Запуск тестов
 
 В командной строке:
