@@ -1,25 +1,27 @@
 # Google Merchant Feed Generator
 
-Библиотека для создания [Google Merchant Feed](https://support.google.com/merchants/answer/7052112?hl=ru).
+[![Latest Stable Version](https://poser.pugx.org/oldmine/google-merchant-feed-generator/v/stable)](https://packagist.org/packages/oldmine/google-merchant-feed-generator)
+[![Total Downloads](https://poser.pugx.org/oldmine/google-merchant-feed-generator/downloads)](https://packagist.org/packages/oldmine/google-merchant-feed-generator)
+[![License](https://poser.pugx.org/oldmine/google-merchant-feed-generator/license)](https://packagist.org/packages/oldmine/google-merchant-feed-generator)
 
-Библиотека проверяет целостность и формат данных чтобы соответствовать требованиям Google Merchant Center.
+Library to generate valid [Google Merchant Feed](https://support.google.com/merchants/answer/7052112).
 
-Данные для заполнения вы получаете из вашей базы данных, xml, json или иного формата и устанавливаете с помощью удобных методов.
+Library check data integrity and format to fit Google Merchant Center requirements.
 
-[Страница на packagist.org](https://packagist.org/packages/oldmine/google-merchant-feed-generator)
+Data to feed you will take from database, xml, json or other source and set it using library methods.
 
 ## Getting Started
 
-### Зависимости
+### Dependencies
 
 ````
 PHP >= 5.3
 Composer (optional)
 ````
 
-### Установка
+### Install
 
-Выберите удобный вам способ установки
+Choose acceptable installation method to your website
 
 #### Composer (.json)
 ````
@@ -35,7 +37,7 @@ Composer (optional)
 composer require oldmine/google-merchant-feed-generator
 ````
 
-#### Если вы не используете Composer:
+#### Without Composer:
 ````
 require_once('src/IFeedGenerator.php');
 require_once('src/IGenerated.php');
@@ -46,28 +48,28 @@ require_once('src/Feed.php');
 require_once('src/XMLGenerator.php');
 ````
 
-#### Пример использования
+#### Usage examples
 
 See [UsageExample.php](UsageExample.php).
 
-Выбрав генератор фида у вас есть несколько вариантов вывода результата:
+When you have chosen feed generator you can choose method to get result:
 
 ````
-$generator->printFeed() // Вывод фида в текущем документе
-$generator->saveFeed($file) // Сохранить фид в $file 
-$generator->getFeed() // Получить фид в виде строки
+$generator->printFeed() // Print feed in current document
+$generator->saveFeed($file) // Save feed to $file
+$generator->getFeed() // Get feed as string
 ````
-## Запуск тестов
+## Tests
 
-В командной строке:
+To run tests use command:
 ````
 phpunit tests
 ````
 
-## Авторы
+## Author
 
 * **Daniil Zhelninskiy** - [Oldmine](https://github.com/oldmine)
 
-## Лицензия
+## License
 
 This project is licensed under the Apache License Version 2.0 - see the [LICENSE.md](LICENSE.md) file for details
